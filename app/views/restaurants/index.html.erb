@@ -1,0 +1,6 @@
+<h1>Welcome to the restaurant page</h1>
+<ul class="list-group">
+<% @restaurants.each do |restaurant| %>
+  <li class="list-group-item"> <%= restaurant.name %></li>
+<% end %>
+</ul>
