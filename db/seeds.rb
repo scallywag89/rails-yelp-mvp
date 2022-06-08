@@ -1,6 +1,9 @@
-puts 'Clearing the database'
+require 'faker'
+
+puts 'Clearing the database...'
+Restaurant.destroy_all
+puts 'Creating 5 fake restaurants...'
 5.times do
-  Restaurant.destroy_all
   restaurant = Restaurant.create!(
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
