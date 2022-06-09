@@ -1,0 +1,10 @@
+
+<div class="p-5">
+  <%= simple_form_for [ @restaurant, @review ] do |f| %>
+    <div class="w-25"><%= f.input :content %></div>
+    <div class="w-25" ><%= f.input :rating %>
+    <small id="emailHelp" class="form-text text-muted">Rate them out of 5</small>
+    </div>
+    <div class="w-25 pt-3"><%= f.submit "Submit review", class: "btn btn-primary btn-lg" %></div>
+  <% end %>
+</div>

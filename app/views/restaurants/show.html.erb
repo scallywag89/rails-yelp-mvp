@@ -1,0 +1,18 @@
+<div class="p-5">
+  <h2><%= @restaurant.name %></h2>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <p><%= @restaurant.category %></p>
+    <% @restaurant.reviews.each do |review| %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <p class="card-text"><%= review.content %></p>
+          <p class="blockquote-footer">rating: <%= review.rating %> stars</p>
+        </div>
+      </div>
+    <% end %>
+</div>
+<div class="p-5">
+  <%= link_to 'Back', restaurants_path %> |
+  <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
+</div>
